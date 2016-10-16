@@ -1,5 +1,6 @@
 #!/bin/bash
 # Automatically set Git config values from parent folders.
+# See https://stackoverflow.com/a/39759416/2747593
 
 dir=$(pwd)
 while [ "$dir" != "/" ]
