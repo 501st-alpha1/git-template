@@ -7,7 +7,7 @@ while [ "$dir" != "/" ]
 do
   # First directory would be the new Git repo, so skip it.
   dir=$(dirname $dir)
-  if [ -f $dir/.gitconfig ]
+  if [ -f $dir/.gitconfig ] && [ "$dir" != "$HOME" ]
   then
     for config in $(git config --file $dir/.gitconfig --list)
     do
